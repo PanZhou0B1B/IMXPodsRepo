@@ -59,4 +59,11 @@ Pod::Spec.new do |s|
     end
   end
 
+# ObjectExt Cpt
+  s.subspec 'IMXObjectExt' do |oext|
+    oext.source_files  = 'IMXFuncCpt/Libs/2nd/IMXObjectExt/*.{h,m}'    	    
+    oext.public_header_files = [
+      'IMXFuncCpt/Libs/2nd/IMXObjectExt/*.{h}'
+    ]
+  end
 end
