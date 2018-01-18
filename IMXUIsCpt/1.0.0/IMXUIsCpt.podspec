@@ -92,6 +92,30 @@ Pod::Spec.new do |s|
     tabkit.dependency 'Masonry' ,'~> 1.1.0'
   end
 
+# IMXListView Cpt
+  s.subspec 'IMXListView' do |list|
+    list.source_files  = 'IMXUIsCpt/Cpts/IMXListView/*.{h,m}'
+    list.public_header_files = [
+     'IMXUIsCpt/Cpts/IMXListView/*.{h}'
+    ]
+    list.dependency 'MJRefresh' ,'~> 3.1.15.1'
+
+    list.dependency 'Masonry' ,'~> 1.1.0'
+
+    list.subspec 'IMXReuseUIs' do |reuse|
+    reuse.source_files  = 'IMXUIsCpt/Cpts/IMXListView/IMXReuseUIs/*.{h,m}'
+    reuse.public_header_files = [
+      'IMXUIsCpt/Cpts/IMXListView/IMXReuseUIs/*.{h}'
+    ]
+    reuse.dependency 'IMXUIsCpt/IMXUIs'
+    end
+    list.subspec 'Layout' do |layout|
+    layout.source_files  = 'IMXUIsCpt/Cpts/IMXListView/Layout/*.{h,m}'
+    layout.public_header_files = [
+    'IMXUIsCpt/Cpts/IMXListView/Layout/*.{h}'
+    ]
+    end
+  end
 
 # IMXUIs Cpt
   s.subspec 'IMXUIs' do |uis|
