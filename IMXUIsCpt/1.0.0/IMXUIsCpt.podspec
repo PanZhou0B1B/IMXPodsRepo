@@ -116,6 +116,26 @@ Pod::Spec.new do |s|
     ]
     end
   end
+# IMXSegmentKit Cpt
+  s.subspec 'IMXSegmentKit' do |skit|
+  skit.source_files  = 'IMXUIsCpt/Cpts/IMXSegmentKit/*.{h,m}'
+  skit.public_header_files = [
+    'IMXUIsCpt/Cpts/IMXSegmentKit/*.{h}'
+  ]
+  skit.dependency 'IMXFuncCpt/IMXObjectExt','~> 1.1.0' ##私有库引用
+  skit.dependency 'IMXUIsCpt/IMXUIKitExt'
+  skit.dependency 'Masonry' ,'~> 1.1.0'
+
+end
+# IMXSafeAreaKit Cpt
+  s.subspec 'IMXSafeAreaKit' do |safe|
+  safe.source_files  = 'IMXUIsCpt/Utils/IMXSafeAreaKit/*.{h,m}'
+  safe.public_header_files = [
+    'IMXUIsCpt/Utils/IMXSafeAreaKit/*.{h}'
+  ]
+  safe.dependency 'IMXUIsCpt/IMXUIKitExt'
+
+end
 
 # IMXUIs Cpt
   s.subspec 'IMXUIs' do |uis|
