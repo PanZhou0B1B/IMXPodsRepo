@@ -89,7 +89,18 @@ Pod::Spec.new do |s|
     tabkit.public_header_files = [
       'IMXUIsCpt/Cpts/IMXTabBarKit/*.{h}'
     ]
-    tabkit.dependency 'Masonry' ,'1.1.0'
+    tabkit.dependency 'Masonry' ,'~> 1.1.0'
   end
 
+
+# IMXUIs Cpt
+  s.subspec 'IMXUIs' do |uis|
+    uis.source_files  = 'IMXUIsCpt/Libs/2nd/IMXUIs/*.{h,m}'
+    uis.public_header_files = [
+      'IMXUIsCpt/Libs/2nd/IMXUIs/*.{h}'
+    ]
+    uis.dependency 'Masonry' ,'~> 1.1.0'
+    uis.dependency 'IMXFuncCpt/IMXObjectExt','~> 1.1.0' ##私有库引用
+    uis.dependency 'IMXUIsCpt/IMXStyleKit'
+  end
 end
