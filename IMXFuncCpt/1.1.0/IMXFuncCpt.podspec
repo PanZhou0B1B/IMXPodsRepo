@@ -84,4 +84,12 @@ Pod::Spec.new do |s|
     ]
     #pst.frameworks = 'CommonCrypto'
   end
+
+# IMXValidator Cpt
+  s.subspec 'IMXValidator' do |val|
+    val.source_files  = 'IMXFuncCpt/Libs/2nd/IMXValidator/*.{h,m}'
+    val.public_header_files = [
+      'IMXFuncCpt/Libs/2nd/IMXValidator/*.{h}'
+    ]
+  end
 end
