@@ -29,26 +29,19 @@ Pod::Spec.new do |s|
   s.public_header_files = [
       'IMXDebugModule/Biz/*.{h}'
     ]
-
-# IMXDebugModule Cpt
-  s.subspec 'IMXService' do |svc|
-    svc.source_files  = 'IMXDebugModule/Cpts/Funcs/IMXService/*.{h,m}'
-    svc.public_header_files = [
-      'IMXDebugModule/Cpts/Funcs/IMXService/*.{h}'
-    ]
-  end
-# IMXFBPerformance Cpt
-  s.subspec 'IMXFBPerformance' do |fb|
-    fb.source_files  = 'IMXDebugModule/Cpts/Funcs/IMXFBPerformance/*.{h,m}'
-    fb.public_header_files = [
-      'IMXDebugModule/Cpts/Funcs/IMXFBPerformance/*.{h}'
-    ]
-  end
 # IMXPerformance Cpt
   s.subspec 'IMXPerformance' do |pfc|
-    pfc.source_files  = 'IMXDebugModule/Cpts/Funcs/IMXPerformance/*.{h,m}'
+    pfc.source_files  = 'IMXDebugModule/Biz/IMXPerformance/*.{h,m}'
     pfc.public_header_files = [
-      'IMXDebugModule/Cpts/Funcs/IMXPerformance/*.{h}'
+      'IMXDebugModule/Biz/IMXPerformance/*.{h}'
+    ]
+    pfc.dependency 'IMXDebugModule/private'
+  end
+# private Cpt
+  s.subspec 'private' do |prt|
+    prt.source_files  = 'IMXDebugModule/Biz/private/*.{h,m}'
+    prt.public_header_files = [
+      'IMXDebugModule/Biz/private/*.{h}'
     ]
   end
 s.dependency 'Masonry' ,'~> 1.1.0'
