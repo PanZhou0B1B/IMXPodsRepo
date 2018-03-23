@@ -122,7 +122,7 @@ Pod::Spec.new do |s|
   skit.public_header_files = [
     'IMXUIsCpt/Cpts/IMXSegmentKit/*.{h}'
   ]
-  skit.dependency 'IMXFuncCpt/IMXObjectExt','~> 1.1.0' ##私有库引用
+  skit.dependency 'IMXFuncCpt/IMXObjectExt','~> 1.2.0' ##私有库引用
   skit.dependency 'IMXUIsCpt/IMXUIKitExt'
   skit.dependency 'Masonry' ,'~> 1.1.0'
 
@@ -144,7 +144,7 @@ end
       'IMXUIsCpt/Libs/2nd/IMXUIs/*.{h}'
     ]
     uis.dependency 'Masonry' ,'~> 1.1.0'
-    uis.dependency 'IMXFuncCpt/IMXObjectExt','~> 1.1.0' ##私有库引用
+    uis.dependency 'IMXFuncCpt/IMXObjectExt','~> 1.2.0' ##私有库引用
     uis.dependency 'IMXUIsCpt/IMXStyleKit'
   end
 end
