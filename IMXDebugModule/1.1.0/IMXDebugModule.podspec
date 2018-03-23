@@ -23,8 +23,6 @@ Pod::Spec.new do |s|
   s.source       = { :git => "git@gitlab.com:zhowpan1127/IMXDebugModule.git", :tag => "#{s.version}" }
 
   s.requires_arc = true
-
-
   s.source_files  = 'IMXDebugModule/Biz/*.{h,m}'
   s.public_header_files = [
       'IMXDebugModule/Biz/*.{h}'
@@ -51,6 +49,6 @@ s.dependency 'FBAllocationTracker' ,'~> 0.1.5'
 s.dependency 'FBRetainCycleDetector' ,'~> 0.1.3'
 s.dependency 'FLEX' ,'~> 2.4.0'
 
-s.dependency 'IMXFuncCpt/Launcher','~> 1.1.0' ##私有库引用
+s.dependency 'IMXFuncCpt/Launcher','~> 1.2.0' ##私有库引用
 end
 
