@@ -44,9 +44,9 @@ Pod::Spec.new do |s|
   end
 s.dependency 'Masonry' ,'~> 1.1.0'
 s.dependency 'pop' ,'~> 1.0.10'
-s.dependency 'FBMemoryProfiler' ,'~> 0.1.3'
-s.dependency 'FBAllocationTracker' ,'~> 0.1.5'
-s.dependency 'FBRetainCycleDetector' ,'~> 0.1.3'
+# s.dependency 'FBMemoryProfiler' ,'~> 0.1.3'
+# s.dependency 'FBAllocationTracker' ,'~> 0.1.5'
+# s.dependency 'FBRetainCycleDetector' ,'~> 0.1.3'
 s.dependency 'FLEX' ,'~> 2.4.0'
 
 s.dependency 'IMXFuncCpt/Launcher','~> 1.2.0' ##私有库引用
